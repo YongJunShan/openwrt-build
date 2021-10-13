@@ -14,3 +14,4 @@
 sed -i 's/192.168.1.1/192.168.188.254/g' package/base-files/files/bin/config_generate
 sed -i 's/OpenWrt/MKTECH/g' package/base-files/files/bin/config_generate
 sed -i 's/UTC/CST-8/g' package/base-files/files/bin/config_generate
+sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/
