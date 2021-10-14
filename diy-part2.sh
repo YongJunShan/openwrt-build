@@ -16,9 +16,3 @@ sed -i 's/192.168.1.1/192.168.188.254/g' package/base-files/files/bin/config_gen
 sed -i 's/OpenWrt/MKTECH/g' package/base-files/files/bin/config_generate
 # Modify default timezone
 sed -i 's/UTC/CST-8/g' package/base-files/files/bin/config_generate
-# Modify default theme
-sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
-# clone argon theme
-cd package/lean
-rm -rf luci-theme-argon  
-git clone https://github.com/jerrykuku/luci-theme-argon.git  
