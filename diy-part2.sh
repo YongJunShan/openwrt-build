@@ -22,6 +22,7 @@ sed -i 's/Bootstrap/Argon/g' feeds/luci/collections/luci/
 cd package/lean  
 rm -rf luci-theme-argon  
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
+cd ../..
 # Modify default banner
 cat > package/base-files/files/etc/banner <<-EOF 
 ______       _ _     _   _            ___  ___ _   _______ _____ _____  _   _ 
