@@ -18,7 +18,7 @@ sed -i 's/OpenWrt/MKTECH/g' package/base-files/files/bin/config_generate
 sed -i 's/UTC/CST-8/g' package/base-files/files/bin/config_generate
 # Modify default theme
 sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
-sed -i 's/Bootstrap/Argon/g' feeds/luci/collections/luci/
+sed -i 's/Bootstrap/Argon/g' feeds/luci/collections/luci/Makefile
 cd package/lean  
 rm -rf luci-theme-argon  
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
