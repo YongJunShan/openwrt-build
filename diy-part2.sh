@@ -23,3 +23,19 @@ cd package/lean
 rm -rf luci-theme-argon  
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 # Modify default banner
+echo << EOF > package/base-files/files/etc/banner
+______       _ _     _   _            ___  ___ _   _______ _____ _____  _   _ 
+| ___ \     (_) |   | | | |           |  \/  || | / /_   _|  ___/  __ \| | | |
+| |_/ /_   _ _| | __| | | |__  _   _  | .  . || |/ /  | | | |__ | /  \/| |_| |
+| ___ \ | | | | |/ _` | | '_ \| | | | | |\/| ||    \  | | |  __|| |    |  _  |
+| |_/ / |_| | | | (_| | | |_) | |_| | | |  | || |\  \ | | | |___| \__/\| | | |
+\____/ \__,_|_|_|\__,_| |_.__/ \__, | \_|  |_/\_| \_/ \_/ \____/ \____/\_| |_/
+                                __/ |                                         
+                               |___/                                          
+ ------------------------------------------------------------------------------
+ %D %V, %C
+ ------------------------------------------------------------------------------
+ EOF
+ 
+# Modify default network connect
+echo 'net.netfilter.nf_conntrack_max=65535' | tee -a package/base-files/files/etc/sysctl.conf
